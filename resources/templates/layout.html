@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Computer Vision Demo</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/content/add.bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/content/imupload.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/styles/joosohn.css"/>
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <script src="/static/handler/click_and_go.js"></script>
+</head>
+
+
+<body style="padding: 0px">
+<div class="row">
+    {% include "/layouts/top_navi.html" %}
+    <main>
+        <div class="container body-content">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+</div>
+
+<footer>
+    <p align="right" style="margin-right: 40px;">&copy; {{ year }} - Computer Vision Demo Page
+        <div align="right" style="font-size: 8pt; color: lightgray; margin-right: 40px;"><small> Develop by Sohn, Joon Sung</small></div>
+    </p>
+</footer>
+<script src="/static/scripts/jquery-1.10.2.js"></script>
+<script src="/static/scripts/bootstrap.js"></script>
+<script src="/static/scripts/respond.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+
+
+</html>

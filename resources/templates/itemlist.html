@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h3 class="display-4">G9 이미지 Parsing</h3>
+        <h5>
+            카테고리 내 키워드 검색에 기반하여 live 되는 상품을 select & Download
+        </h5>
+    </div>
+</div>
+<div class="container">
+    <table width="100%" align="center">
+        <div class="row">
+            <div class="col-sm-4">
+                <h5>대상카테고리<br>
+                    <input class="serachbox" name="category" type="text" id="input_category"
+                           placeholder="40000X/500x/6000X" value=""></h5>
+            </div>
+            <div class="col-sm-3">
+                <h5>키워드<br>
+                    <input class="serachbox" name="keyword" type="text" id="input_keyword" placeholder="기본소매" value="">
+                </h5>
+            </div>
+            <div class="col-sm-2">
+                <h5>페이지<br>
+                    <input class="serachbox" name="page" type="text" id="input_page" placeholder="1" value="">
+                </h5>
+            </div>
+            <div class="col-sm-3">
+                <h5></h5><br>
+                <button class="searchbutton"
+                        onclick="postKeyword('/joosohn/image/parsing/keyword', wait_spinner, result_itemlist,input_category,input_keyword,input_page)">
+                    Search
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h5>기본 폴더주소<br>
+                    <input class="serachbox" name="basePath" type="text" id="input_base_path"
+                           placeholder="/mnt/data4/database" value="/mnt/data4/data/g9_item_selection/images"></h5>
+            </div>
+            <div class="col-sm-4">
+                <h5>키워드<br>
+                    <input class="serachbox" name="categoryPath" type="text" id="input_category_path"
+                           placeholder="남성상의/DressShirt" value="">
+                </h5>
+            </div>
+            <div class="col-sm-3">
+                <h5></h5><br>
+                <button class="searchbutton"
+                        onclick="postDownload(wait_spinner, input_base_path, input_category_path)">
+                    Download
+                </button>
+                <button class="searchbutton">
+                    Check
+                </button>
+            </div>
+        </div>
+    </table>
+</div>
+<div class="container">
+    <p>
+    <div id="wait_spinner" class="loading_progress" style="display:none;" align="center"></div>
+    </p>
+    <table width="100%" align="center">
+        <div id="result_itemlist" width="100%"></div>
+    </table>
+</div>
+
+
+{% endblock %}

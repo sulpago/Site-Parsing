@@ -1,0 +1,141 @@
+.drag_drop_box {
+    width: 100%;
+    height: 300px;
+    opacity: 0.8;
+    background: #dddddd;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #4b4b4b;
+    padding-top: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.serachbox {
+    /*width: 600px;*/
+    width: 100%;
+    font-size: 10pt;
+    padding: 6px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+.searchbutton {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 4px 0;
+    text-decoration: none;
+    background: #002752;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 10pt;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+    transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.searchbutton:hover,
+.searchbutton:focus {
+    background: #0053ba;
+}
+
+.searchbutton:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.searchbutton:active {
+    transform: scale(0.99);
+}
+
+nav.sidebar:hover + .main {
+    margin-left: 200px;
+}
+
+nav.sidebar.navbar.sidebar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+nav.sidebar .navbar-brand, nav.sidebar .navbar-header {
+    text-align: center;
+    width: 100%;
+    margin-left: 0px;
+}
+
+nav.sidebar a {
+    padding-right: 13px;
+}
+
+nav.sidebar .navbar-nav > li:first-child {
+    border-top: 1px #e5e5e5 solid;
+}
+
+nav.sidebar .navbar-nav > li {
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+nav.sidebar .navbar-collapse, nav.sidebar .container-fluid {
+    padding: 0 0px 0 0px;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+}
+
+nav.sidebar {
+    width: 200px;
+    height: 100%;
+    margin-left: -160px;
+    float: left;
+    margin-bottom: 0px;
+}
+
+nav.sidebar li {
+    width: 100%;
+}
+
+nav.sidebar:hover {
+    margin-left: 0px;
+}
+
+.card {
+    border: 2px;
+    border-color: red;
+    background-color: transparent;
+}
+
+.loading_progress {
+    width: 200px;
+    height: 200px;
+    margin: -50px 0 0 -50px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
